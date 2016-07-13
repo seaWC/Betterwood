@@ -1,0 +1,31 @@
+.dialog{
+  position: absolute;
+  width: 90%;
+  top:  50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%,0);
+  background: #FFFFFF;
+  border:1px solid #eeeeee;
+  z-index: 10100;
+  .dialog-title{
+    border-bottom: 1px solid #ccc;
+    line-height: 1.4;
+    padding: 10px;
+    font-size: .9rem;
+    background: lightblue;
+  }
+  .dialog-btn{
+    display: flex;
+    display: -webkit-flex;
+
+    .btn{
+      flex: 1;
+      text-align: center;
+      line-height: 40px;
+      font-size: 1rem;
+      &:first-of-type{
+        border-right: 1px solid #ff0;
+      }
+    }
+  }
+}

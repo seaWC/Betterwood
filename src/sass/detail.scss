@@ -1,0 +1,190 @@
+%bb{border-bottom:1px solid #cccccc;}
+.detail-page{
+  overflow: auto;
+  width: 100%;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+}
+//顶部图集
+.hotel-img{
+  height: 140px;
+  position: relative;
+  p{
+    height: 100%;
+  }
+  img{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .look-more{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    background: #000;
+    color: $dimColor;
+    padding: 10px;
+  }
+}
+
+//酒店介绍
+.hotel-info{
+  background: #FFFFFF;
+  overflow: hidden;
+  .hotel-info-tab{
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid $baseColor;
+    border-radius: 3px;
+    span{
+      float: left;
+      width: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: $baseColor;
+      &.active{
+        background: $baseColor;
+        color: $dimColor;
+      }
+    }
+  }
+
+  .tab-win{
+    min-height: 200px;
+    overflow: hidden;
+    @extend %bb;
+    .tab-wrap{
+      width: 200%;
+
+    }
+    .tab-con{
+      float: left;
+      width: 50%;
+      min-height: 200px;
+      padding: 0 2.5%;
+    }
+    p{
+      height: 45px;
+      line-height: 45px;
+      width: 100%;
+      color: $darkColor;
+      @extend %textflow;
+      @extend %bb;
+    }
+    .hotel-info-name{
+      color: #000000;
+      font-weight: 600;
+      height: 40px;
+      @extend %bb;
+    }
+    .hotel-info-address{
+      height: 65px;
+      line-height: 65px;
+      border-bottom: none;
+
+    }
+    .hotel-info-detail{
+      height: 180px;
+      @extend %textflow;
+      line-height: 30px;
+      font-size: .9rem;
+      text-indent: 1.8rem;
+      white-space: normal !important;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+//日期stylesheet
+.change-date{
+  margin-top: 20px;
+  border-top: 1px solid #cccccc;
+  font-size: .8rem;
+  background: #FFFFFF;
+  @extend %bb;
+  div{
+    float: left;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+  span{
+    @include rightArrow();
+  }
+}
+
+//酒店房间类型
+.detail-room-type{
+  padding: 0 10px;
+  background: #FFFFFF;
+
+  @extend %bb;
+  .room-type{
+    @include flex;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  .type-name{
+    color: #000;
+    font-weight:800;
+  }
+  .type-character{
+    font-size: .7rem;
+    color: #aaaaaa;
+    span{
+      margin-right: .8rem;
+    }
+  }
+  .type-item{
+    height: 90px;
+    @include flex;
+    @include center;
+    @include vertical;
+    @extend %bb;
+    &:first-child{
+      @include flexTo(2);
+      align-items: flex-start;
+    }
+    &:nth-child(2){
+      color: orange;
+      align-items: flex-end;
+      padding-right: 1rem;
+    }
+
+    .book{
+      border: 1px solid $baseColor;
+      color: $baseColor;
+      background: #FFFFFF;
+      padding: 3px 7px;
+      font-size: 1rem;
+      border-radius:2px;
+    }
+    .disable{
+      background: #ccc;
+      color: #999;
+      border-color: #999;
+    }
+    .detail-price{
+      font-size: 1.1rem;
+    }
+    .detail-ensure{
+      background: orange;
+      color: #FFFFFF;
+      font-size: .8rem;
+      border-radius: 2px;
+      padding: 1px;
+    }
+    @include flexTo(1)
+  }
+}
+.load-more{
+  text-align: center;
+  line-height:44px;
+  height: 44px;
+  color: $darkColor;
+
+  @extend %bb;
+}

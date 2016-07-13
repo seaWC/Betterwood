@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/main.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="top-bar"><span class="back"></span>订单填写</header>
+    <div class="order-container">
+        <div class="detail-info">
+            <dl>
+                <dt><img src="" alt=""></dt>
+                <dd>
+                    <p>北京王府井希尔顿酒店</p>
+                    <p>￥90 大床房</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="order-date">
+            <div class="order-date-item"><span>到店</span> 5月30号</div>
+            <div class="order-date-item"><span>离店</span> 7月30号</div>
+        </div>
+        <div class="order-customer-info">
+            <h3 class="order-title">房间信息</h3>
+            <div class="info-detail">
+                <p class="right-arrow clearfix room-count"><span>房间数量</span><span class="count">1</span></p>
+                <p class="right-arrow clearfix room-time"><span>到店时间</span><span class="time">19:00</span></p>
+            </div>
+        </div>
+        <div class="order-customer-info customer-detail-info">
+            <h3 class="order-title">入住人信息 <span class="choose-customer-btn">选择入住人</span></h3>
+            <div class="info-detail">
+                <p><span>姓名</span><input class="name" type="text"></p>
+                <p><span>证件</span><input class="id-num" type="text"></p>
+            </div>
+
+        </div>
+        <div class="order-customer-info">
+            <h3 class="order-title">联系人信息</h3>
+            <div class="info-detail">
+                <p><span>姓名</span><input type="text"></p>
+                <p><span>手机</span><input type="text"></p>
+            </div>
+        </div>
+        <div class="mask-layer hide"></div>
+        <!--<div class="plugin-bottom plugin-list">
+            <div class=""></div>
+        </div>-->
+    </div>
+    <footer class="bottom-bar fillorder-bar">
+        <div class="ensure">担保交易 <span>￥90</span></div>
+        <div class="book-btn">立即预定</div>
+    </footer>
+    <!--<div class="slide-selector">
+        <div class="mask-layer"></div>
+        <div class="slide-content">
+            <div class="slide-title">xxxx <span class="slide-cancel">取消</span></div>
+            <ul>
+                <li class="selected">1</li>
+            </ul>
+        </div>
+    </div>-->
+    <div class="plugin">
+        <div class="choose-customer">
+            <h2 class="title"><a href="javascript:;" class="back"></a>选择入住人 <span class="done">确定</span></h2>
+            <div class="customer-wrapper">
+                <ul>
+                    <!--<li class="customer-info-item">
+                        <div class="select-icon"><span></span></div>
+                        <div class="customer-info">
+                            <p><span>姓名</span><span>张三</span></p>
+                            <p><span>证件号</span><span>123456787654</span></p>
+                        </div>
+                        <div class="edit-info"><span class="right-arrow"></span></div>
+                    </li>
+                    <li class="customer-info-item">
+                        <div class="select-icon selected"><span></span></div>
+                        <div class="customer-info">
+                            <p><span>姓名</span><span>张三</span></p>
+                            <p><span>证件号</span><span>123456787654</span></p>
+                        </div>
+                        <div class="edit-info"><span class="right-arrow"></span></div>
+                    </li>
+                    <li class="customer-info-item">
+                        <div class="select-icon"><span></span></div>
+                        <div class="customer-info">
+                            <p><span>姓名</span><span>张三</span></p>
+                            <p><span>证件号</span><span>123456787654</span></p>
+                        </div>
+                        <div class="edit-info"><span class="right-arrow"></span></div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dialog hide">
+        <div class="dialog-title">title</div>
+        <div class="dialog-btn">
+            <!--<span class="btn ok">确定</span>
+            <span class="cancel btn">取消</span>-->
+        </div>
+    </div>
+    <div class="advanced-mask-layer hide"></div>
+</div>
+
+
+<script type="text/javascript" data-main="main" src="lib/require.js"></script>
+</body>
+</html>

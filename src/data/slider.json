@@ -1,0 +1,17 @@
+[
+   {  
+      "img":"img/banner1.jpg",
+      "height":320,
+      "width":750
+   },
+   {
+      "img":"img/banner2.jpg",
+      "height":320,
+      "width":750
+   },
+   {
+      "img":"img/banner3.jpg",
+      "height":320,
+      "width":750
+   }
+]

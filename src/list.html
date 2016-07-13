@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>列表页</title>
+    <link rel="stylesheet" href="../dist/main.css">
+</head>
+<body>
+<script>
+    obj={
+        count: 224
+    }
+</script>
+<div class="container">
+    <header class="top-bar"><a href="###" class="back"></a><span>123</span>间酒店</header>
+    <div class="list-container">
+        <div class="list-date">
+        <div class="list-date-in right-arrow">入住日 <span>04-20</span></div>
+        <div class="list-date-out right-arrow">离店日 <span>04-22</span></div>
+    </div>
+        <section class="list-wrap">
+            <ul></ul>
+<!--<script id="list-tpl" type="text/html">
+    <ul>
+        <%for(var i = 0; i< data.length; i++){%>
+        <li class="list-item" dataDistance=" <%= data[i].distance %> " dataBrand=" <%= data[i].name %> " dataStars=" <%= data[i].stars %> " dataPrice=" <%= data[i].low_price/100 %>+ '">
+            <div class="list-img"><img src=" <%= data[i].image %>" alt=""></div>
+            <div class="list-detail">
+                <p> <%= data[i].name %></p>
+                <p><span><em>4.6分</em><em class="list-icon color-y">礼</em><em class="list-icon color-r">促</em><em class="list-icon color-b">返</em></span>
+                    <span><em class="list-price">￥ <%= data[i].low_price/100 %> </em><em>起</em></span></p>
+                <p class="service-info"><span class=""> <%= data[i].stars %></span><span></span><span>P</span></p>
+                <p><span> <%= data[i].addr %></span><span> <%= data[i].distance/1000 %> km</span></p>
+            </div>
+        </li>
+        <%}%>
+    </ul>
+</script>-->
+                <!--<li class="list-item" data="">
+                    <div class="list-img"><img src="img/1.jpg" alt=""></div>
+                    <div class="list-detail">
+                        <p>北京王府井希尔顿酒店</p>
+                        <p>
+                            <span>
+                                <em>4.6分</em>
+                                <em class="list-icon color-y">礼</em>
+                                <em class="list-icon color-r">促</em>
+                                <em class="list-icon color-b">返</em>
+                            </span>
+                            <span>
+                                <em class="list-price">￥50</em><em>起</em>
+                            </span>
+                        </p>
+                        <p class="service-info">
+                            <span class="">经济型</span><span></span><span>P</span>
+                        </p>
+                        <p>
+                            <span>广州市越秀区长堤大马路</span>
+                            <span>0.8km</span>
+                        </p>
+                    </div>
+                </li>-->
+
+        </section>
+        <div class="mask-layer hide"></div>
+        <div class="plugin-bottom plugin-list">
+            <div class="screen">
+                <ul>
+                    <li class="active"><p><span class="screen-txt">不限</span><span class="checkbox"></span></p></li>
+                    <li><p><span class="screen-txt">二星以下</span><span class="checkbox"></span></p></li>
+                    <li><p><span class="screen-txt">三星</span><span class="checkbox"></span></p></li>
+                    <li><p><span class="screen-txt">四星</span><span class="checkbox"></span></p></li>
+                    <li><p><span class="screen-txt">五星</span><span class="checkbox"></span></p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="bottom-bar list-bar">
+        <ul>
+            <li class="up-arrow" data="range">排序</li>
+            <li class="up-arrow" data="price">价格</li>
+            <li class="up-arrow" data="brand">品牌</li>
+            <li class="up-arrow" data="stars">星级</li>
+        </ul>
+    </footer>
+    <div class="plugin"></div>
+    <div class="dialog hide">
+        <div class="dialog-title">title</div>
+        <div class="dialog-btn">
+            <!--<span class="btn ok">确定</span>
+            <span class="cancel btn">取消</span>-->
+        </div>
+    </div>
+    <div class="advanced-mask-layer hide"></div>
+</div>
+<!--<script src="lib/template-native.js"></script>-->
+<script>
+    /*function serverLink(path, param, callback) {
+        var xhr = new XMLHttpRequest(), data = null;
+        xhr.open('post', path, true)//true 异步
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                data = JSON.parse(xhr.responseText);
+                callback && callback(data);
+            }
+        };
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(param);
+    }
+    serverLink("data/hotel.json", "123" ,function(data){
+        var _data = data.result.hotel_list;
+        document.querySelector(".list-wrap").innerHTML = template("list-tpl",{data:_data});
+    });*/
+</script>
+<script type="text/javascript" data-main="main" src="lib/require.js"></script>
+<!--<script src="../public/main.min.js"></script>-->
+</body>
+</html>

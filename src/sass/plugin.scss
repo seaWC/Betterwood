@@ -1,0 +1,35 @@
+.plugin{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fcfcfc;
+  -webkit-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transform: translate(100%);
+  -webkit-transform: translate(100%);
+  z-index: 11000;
+}
+
+.plugin-bottom{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 44px;
+  background: #f4f5f4;
+  -webkit-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  z-index: 100;
+}
+
+
+.plugin-show{
+  transform: translate(0%);
+  -webkit-transform: translate(0%);
+
+}
+
+

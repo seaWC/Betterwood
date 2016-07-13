@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import "common";
+
+%bg{background: #FFFFFF;}
+%border{
+  border-bottom: 1px solid #ccc;
+}
+.fillorder-bar{
+  height: 55px;
+  line-height: 55px;
+  border-top: none;
+  text-align: center;
+  @include flex;
+  .ensure{
+    width: 60%;
+    background: #16498F;
+    color: #FFFFFF;
+  }
+  .book-btn{
+    width: 40%;
+    background: $baseColor;
+    color: #FFFFFF;
+  }
+}
+
+//填写页
+.order-container{
+  position: absolute;
+  top: 44px;
+  left: 0;
+  bottom: 55px;
+  width: 100%;
+  overflow: auto;
+  //顶部酒店详情
+  .detail-info{
+    min-height: 80px;
+    width: 100%;
+    @extend %bg;
+  }
+  //重新选择日期
+  .order-date{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    @extend %bg;
+    .order-date-item{
+      float: left;
+      width: 50%;
+      text-align: center;
+    }
+  }
+  //客户信息填写区域
+  .order-customer-info{
+    width: 100%;
+    line-height: 40px;
+    input{
+      border: none;
+      width: 75%;
+      padding-left: 10px;
+      font-size: 1rem;
+    }
+
+
+    .right-arrow{
+      @include rightArrow();
+      position: relative;
+      &:after{
+        position: absolute;
+        right: 5px;
+        top: 14px;
+      }
+
+    }
+    .info-detail{
+      padding: 0 10px;
+      border-bottom: 1px solid #eaeaea;
+      &:last-child{
+        border-bottom: none;
+      }
+      @extend %bg;
+      p:first-child{
+        @extend %border;
+      }
+      p span:last-child{
+        float: right;
+        text-align: right;
+        padding-right: 30px;
+      }
+    }
+    .order-title{
+      padding: 0 10px;
+      position: relative;
+    }
+    .choose-customer-btn{
+      position: absolute;
+      background: $baseColor;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 30px;
+      margin: 5px;
+      right: 5px;
+      font-size: 1rem;
+      border-radius:3px;
+      padding: 0 10px;
+      @include rightArrow(#FFFFFF,7px,7px);
+      &:after{
+        float: right;
+        margin: 11px 2px;
+      }
+    }
+  }
+
+}
+.plugin{
+  .title{
+    @extend %border;
+    @extend %bg;
+  }
+  .customer-wrapper{
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+  }
+  .done{
+    position: absolute;
+    right:10px;
+    background: $baseColor;
+    color: #FFFFFF;
+    margin: 7px;
+    border-radius: 2px;
+    padding: 0 10px;
+    line-height: 30px;
+
+  }
+  .customer-info-item{
+    @include flex();
+    line-height: 35px;
+    height: 82px;
+    @extend %bg;
+    @extend %border;
+  }
+  .select-icon{
+    width: 50px;
+    @include flex;
+    @include center;
+    span{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #CCCCCC;
+      position: relative;
+    }
+  }
+  .selected{
+    .select-icon{
+      span{
+        background: $baseColor;
+        border: none;
+        &:after{
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 6px;
+          border-top: 2px solid #FFFFFF;
+          border-right: 2px solid #FFFFFF;
+          transform: rotate(135deg);
+          margin: 3px;
+        }
+      }
+    }
+
+  }
+  .right-arrow{
+    @include rightArrow();
+  }
+  .customer-info{
+    @include flexTo(1);
+    padding: 5px 0;
+    p{
+      span{
+        float: left;
+
+        &:first-child{
+          width: 20%;
+          text-align: right;
+        }
+        &:last-child{
+          width: 80%;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  .edit-info{
+    width: 30px;
+    @include flex;
+    @include center();
+  }
+}
